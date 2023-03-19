@@ -103,8 +103,7 @@ class MastodonMentionListener(mastodon.StreamListener):
         if notification["type"] == "mention":
             self.logger.info('New mention: %s',
                              notification['status']['content'])
-            for plugin in self.plugins:
-                plugin.process_mention(notification)
+            return notification
 
 
 class MastodonBot:
