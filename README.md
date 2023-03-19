@@ -1,7 +1,5 @@
 # Mastodon Mentions Bot
 
-Note: Only tested on Linux.
-
 This module implements a Mastodon Bot that can automatically respond to 
 mentions. The bot is designed to run as a daemon process, which can be started,
 stopped and checked for its status.
@@ -15,6 +13,11 @@ See all supported services here: https://github.com/caronc/apprise#supported-not
 The bot uses plugins to process mentions in customized ways. The plugins
 must be located in the `plugins` folder and implement the MastodonBotPlugin 
 interface. 
+
+
+Notes:
+- Only tested on Linux.
+- Tested manually. You may know, what it means. ;)
 
 ## Installation
 
