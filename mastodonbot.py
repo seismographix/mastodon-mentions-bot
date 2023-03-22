@@ -83,7 +83,7 @@ class MastodonMentionListener(mastodon.StreamListener):
     mentions.
     """
 
-    def __init__(self, client, plugins, logger):
+    def __init__(self, client, logger):
         """
         Initializes the MastodonMentionListener object with the specified 
         client and logger.
@@ -222,7 +222,7 @@ class MastodonBot:
         """
         Creates a listener object for streaming mentions.
         """
-        listener = MastodonMentionListener(self.client, self.plugins, self.logger)
+        listener = MastodonMentionListener(self.client, self.logger)
         return listener
 
     def _stream_mentions_from_listener(self, listener):
