@@ -86,10 +86,9 @@ class MastodonMentionListener(mastodon.StreamListener):
     def __init__(self, client, plugins, logger):
         """
         Initializes the MastodonMentionListener object with the specified 
-        client and plugins.
+        client and logger.
         """
         self.client = client
-        self.plugins = plugins
         self.logger = logger
 
     def on_notification(self, notification):
@@ -97,8 +96,8 @@ class MastodonMentionListener(mastodon.StreamListener):
         Processes new notifications.
 
         This method is called whenever a new notification is received from the 
-        Mastodon stream. It checks if the notification is a mention and, if so, 
-        processes it with the plugins.
+        Mastodon stream. It checks if the notification is a mention and returns 
+        the notification if true.
         """
         if notification["type"] == "mention":
             self.logger.info('New mention: %s',
