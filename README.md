@@ -4,8 +4,8 @@ This module implements a Mastodon Bot that can automatically respond to
 mentions. The bot is designed to run as a daemon process, which can be started,
 stopped and checked for its status.
 
-The bot uses the Mastodon API library to access the Mastodon API. 
-Problems are reported to administrator of the bot via the Apprise library. 
+The bot uses the Mastodon API library to access Mastodon. Problems are reported 
+to the administrator of the bot via the Apprise library. 
 The Apprise library supports several notification services like Email,
 Mastodon, Telegram, Signal, etc.
 See all supported services here: https://github.com/caronc/apprise#supported-notifications
